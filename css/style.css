@@ -10,6 +10,9 @@
 * 	Template Style 
 *
 * ======================================================= */
+#colorlib-intro .nav-tabs li a i{
+  padding:8px;
+}
 body {
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 300;
