@@ -97,7 +97,7 @@
 				   			<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   				<div class="slider-text-inner text-center">
 				   					<h1>It’s not just about selling, it’s about creating value for your customers</h1>
-				   					<h2>it's Test</h2>
+				   					<h2>The market needs a new approach</h2>
 				   				</div>
 				   			</div>
 				   		</div>
@@ -151,10 +151,10 @@
 				<div class="row">
 					<div class="col-md-12 tabulation animate-box">
 						<ul class="nav nav-tabs">
-							<li class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch"></i> Feasibility and economical study</a></li>
-							<li><a data-toggle="tab" href="#general"><i class="flaticon-architect-with-helmet"></i>Marketing and selling</a></li>
-							<li><a data-toggle="tab" href="#manage"><i class="flaticon-engineer"></i>Branding and advertising</a></li>
-							<li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>Home luxury services and facility management</a></li>
+							<li v-on:click="boxes(1)" class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch" ></i>&nbsp;  Feasibility and economical study</a></li>
+							<li v-on:click="boxes(2)"><a data-toggle="tab" href="#general"><i class="flaticon-architect-with-helmet"></i>&nbsp; Marketing and selling</a></li>
+							<li v-on:click="boxes(3)"><a data-toggle="tab" href="#manage"><i class="flaticon-engineer"></i>&nbsp; Branding and advertising</a></li>
+							<li v-on:click="boxes(4)"><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>&nbsp;Home luxury services</a></li>
 						</ul>
 						<div class="tab-content">
 							<div id="plan" class="tab-pane fade in active">
@@ -236,9 +236,9 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<div id="colorlib-services">
-			<div class="container">
+			<div class="container"  v-show="this.select === 1">
 				<div class="row">
 					<div class="col-md-4 text-center animate-box">
 						<div class="services">
@@ -246,8 +246,8 @@
 								<i class="flaticon-engineer"></i>
 							</span>
 							<div class="desc">
-								<h3>General Constructing</h3>
-								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								<h3>Technical Feasibility</h3>
+								<p> It covers the technical team and other technical resources necessary for success.</p>
 							</div>
 						</div>
 					</div>
@@ -257,8 +257,8 @@
 								<i class="flaticon-engineering"></i>
 							</span>
 							<div class="desc">
-								<h3>Building Modeling</h3>
-								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								<h3>Legal Feasibility</h3>
+								<p>You need to find out if your project will contravene any laws and regulations.</p>
 							</div>
 						</div>
 					</div>
@@ -268,8 +268,8 @@
 								<i class="flaticon-skyline"></i>
 							</span>
 							<div class="desc">
-								<h3>Design Build</h3>
-								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								<h3>Operational Feasibility</h3>
+								<p>Does your project have the necessary operational infrastructure in place to deliver successfully? </p>
 								</div>
 						</div>
 					</div>
@@ -279,8 +279,8 @@
 								<i class="flaticon-crane"></i>
 							</span>
 							<div class="desc">
-								<h3>Construction Services</h3>
-								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								<h3>Scheduling Feasibility</h3>
+								<p>Financially speaking, knowing your timelines helps you figure out how well capitalized you are for the project.</p>
 							</div>
 						</div>
 					</div>
@@ -290,8 +290,8 @@
 								<i class="flaticon-sketch"></i>
 							</span>
 							<div class="desc">
-								<h3>Pre-Construction Design</h3>
-								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								<h3>Market Analysis</h3>
+								<p>Population of the surrounding area and trends, including projected growth, Age of the demographic and target market, Income statistics</p>
 							</div>
 						</div>
 					</div>
@@ -301,13 +301,229 @@
 								<i class="flaticon-conveyor"></i>
 							</span>
 							<div class="desc">
-								<h3>Construction Management</h3>
-								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								<h3>Financial Analysis</h3>
+								<p>Revenue projections, proforma statements, Budget expenses, operating projections, Profit and loss, ROI</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+
+			<div class="container"  v-show="this.select === 2">
+				<div class="row">
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-engineer"></i>
+							</span>
+							<div class="desc">
+								<h3>DETERMINING THE LIST PRICE</h3>
+								<p>We will complete a Comparable Market Analysis and help you set the appropriate sales price for your home</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-engineering"></i>
+							</span>
+							<div class="desc">
+								<h3>PROPERTY LOCATION</h3>
+								<p>consider how close your home is to schools, shopping and services, transportation and amenities.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-skyline"></i>
+							</span>
+							<div class="desc">
+								<h3>PROPERTY CONDITION</h3>
+								<p>consider the structural and mechanical integrity of your home as well as the cosmetic appeal.</p>
+								</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-crane"></i>
+							</span>
+							<div class="desc">
+								<h3>MARKET CONDITIONS</h3>
+								<p>Market conditions are factors that impact buyers that are beyond our control, like mortgage interest rates, consumer confidence</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-sketch"></i>
+							</span>
+							<div class="desc">
+								<h3>CONTRACT TERMS</h3>
+								<p>Inspection dates, mortgage approval contingencies, seller’s disclosures, closing dates and exclusions of fixtures </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-conveyor"></i>
+							</span>
+							<div class="desc">
+								<h3> MARKETING</h3>
+								<p>Our marketing expertise will help you achieve a quicker sale and a higher price than you may otherwise receive.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container"  v-show="this.select === 3">
+				<div class="row">
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-engineer"></i>
+							</span>
+							<div class="desc">
+								<h3>Print advertising</h3>
+								<p>Business Cards, Brochures, Newspaper Advertisements, Homes Magazine Advertisements
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-engineering"></i>
+							</span>
+							<div class="desc">
+								<h3>Online advertising</h3>
+								<p>(social media strategies , Designing sale campaigns , online virtual tours and …)</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-skyline"></i>
+							</span>
+							<div class="desc">
+								<h3>videography and photography</h3>
+								<p>familiarizing buyers with property facilities and competitive potentials </p>
+								</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-crane"></i>
+							</span>
+							<div class="desc">
+								<h3>Events and seminars/webinars</h3>
+								<p>Planning sale events for especial buyers in order to deliver especial services </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-sketch"></i>
+							</span>
+							<div class="desc">
+								<h3>Logo and Patterns</h3>
+								<p>Graphic design, corporate identity and logo and even slogans all with the aim of creating added value</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-conveyor"></i>
+							</span>
+							<div class="desc">
+								<h3>Online scheduling of project visits</h3>
+								<p>Create an online platform to prevent interference in project visitation sessions</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+
+			<div class="container"  v-show="this.select === 4">
+				<div class="row">
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-engineer"></i>
+							</span>
+							<div class="desc">
+								<h3>Security</h3>
+								<p></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-engineering"></i>
+							</span>
+							<div class="desc">
+								<h3>Interior design and architecture</h3>
+								<p></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-skyline"></i>
+							</span>
+							<div class="desc">
+								<h3>Home technology solutions</h3>
+								<p></p>
+								</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-crane"></i>
+							</span>
+							<div class="desc">
+								<h3>Private staff sourcing</h3>
+								<p></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-sketch"></i>
+							</span>
+							<div class="desc">
+								<h3>Household maintenance</h3>
+								<p></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="flaticon-conveyor"></i>
+							</span>
+							<div class="desc">
+								<h3>Events and ceremonies</h3>
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>								
 		</div>
 
 		<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_img_1.jpg);" data-stellar-background-ratio="0.5">
@@ -691,8 +907,6 @@
 							<p>
 								<small class="block">
 									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart3" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 								</small>
 							</p>
 						</div>
@@ -727,7 +941,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="application/javascript">
+		var page = new Vue({
+			el : '#page',
+			data : {
+				select : 1
+			},
+			methods:{
+				boxes : function(id){
+					this.select = id
+				}
+			}
+		})
+	</script>
 	</body>
 </html>
 
